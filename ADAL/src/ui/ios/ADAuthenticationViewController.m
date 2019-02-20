@@ -155,6 +155,7 @@ NSString *const AD_FAILED_NO_CONTROLLER = @"The Application does not have a curr
     [self loadRequest:request];
 
     UINavigationController *navController = [[UINavigationController alloc] initWithRootViewController:self];
+    navController.navigationBar.barStyle = self.parentController.preferredStatusBarStyle == UIStatusBarStyleDefault ? UIBarStyleDefault : UIBarStyleBlack;
 
     if (_fullScreen)
     {
